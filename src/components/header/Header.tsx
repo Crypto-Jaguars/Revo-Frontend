@@ -8,6 +8,7 @@ import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import ItemsHeader from './ItemsHeader';
 import LanguageSwitcher from './LanguageSwitcher';
+import ThemeToggle from './ThemeToggle'; // I did import the component ThemeToggle, it switches between light and dark
 import { usePathname, useRouter } from 'next/navigation';
 import { useLanguageStore } from '@/store/languageStore';
 
@@ -72,10 +73,12 @@ const Header = () => {
 
       <div className="hidden md:flex items-center justify-center gap-5">
         <LanguageSwitcher />
+      
+      {/* // This button has been added and allows the user to change themes */}
+      <ThemeToggle />
 
         {address ? (
           <>
-            <FaUserCircle size={30} className="text-primary" />
             <button
               type="button"
               onClick={handleDisconnect}

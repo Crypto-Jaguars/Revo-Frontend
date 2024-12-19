@@ -3,19 +3,22 @@ import { LuMoonStar } from 'react-icons/lu';
 import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light'); // Retrieves from local storage
 
   useEffect(() => {
     const root = window.document.documentElement;
+  
     if (theme === 'dark') {
       root.classList.add('dark');
+      localStorage.setItem('theme', 'dark'); // Stores the selected theme
     } else {
       root.classList.remove('dark');
+      localStorage.setItem('theme', 'light'); // Stores the selected theme
     }
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
   };
 
   return (
