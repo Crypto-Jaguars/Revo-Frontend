@@ -50,5 +50,24 @@
       }
     },
     "submitButtonText": "Fund escrow"
+  },
+  "Products": {
+    "title": "Products",
+    "filters": {
+      "category": "Category",
+      "farmingMethod": "Farming Method",
+      "delivery": "Delivery Options",
+      "search": "Search products..."
+    },
+    "sortBy": {
+      "label": "Sort by",
+      "price": "Price",
+      "date": "Harvest Date",
+      "stock": "Stock"
+    },
+    "viewMode": {
+      "grid": "Grid view",
+      "list": "List view"
+    }
   }
 }

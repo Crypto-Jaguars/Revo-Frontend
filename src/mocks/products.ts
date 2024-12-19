@@ -1,0 +1,56 @@
+import { Product } from "@/types/product";
+
+export const productsMock: Product[] = [
+  {
+    id: '1',
+    name: 'Organic Tomatoes',
+    description: 'Fresh organic tomatoes from local farms.',
+    price: { amount: 3.5, unit: 'per kg' },
+    farmer: {
+      id: 'f1',
+      name: 'John Doe',
+      farmName: 'Green Acres Farm',
+      location: {
+        latitude: 37.7749,
+        longitude: -122.4194,
+        address: '123 Green Farm Road, CA',
+      },
+    },
+    category: 'Vegetables',
+    subCategory: 'Tomatoes',
+    images: ['tomatoes.jpg'],
+    stockQuantity: 50,
+    harvestDate: new Date('2024-06-01'),
+    certifications: ['organic'],
+    seasonality: ['Summer'],
+    farmingMethod: 'organic',
+    availableForDelivery: true,
+    pickupAvailable: true,
+  },
+  {
+    id: '2',
+    name: 'Fresh Eggs',
+    description: 'Free-range eggs from happy hens.',
+    price: { amount: 4.0, unit: 'per dozen' },
+    farmer: {
+      id: 'f2',
+      name: 'Jane Smith',
+      farmName: 'Sunny Farm',
+      location: {
+        latitude: 40.7128,
+        longitude: -74.006,
+        address: '456 Sunny Lane, NY',
+      },
+    },
+    category: 'Eggs',
+    subCategory: '',
+    images: ['eggs.jpg'],
+    stockQuantity: 30,
+    harvestDate: new Date('2024-06-10'),
+    certifications: ['non-GMO'],
+    seasonality: ['All Year'],
+    farmingMethod: 'conventional',
+    availableForDelivery: false,
+    pickupAvailable: true,
+  },
+]; 
