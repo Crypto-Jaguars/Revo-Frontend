@@ -47,7 +47,7 @@ const LanguageSwitcher = () => {
           <span className="text-black font-bold text-lg">A</span>
         </div>
         <div className="flex items-center justify-center w-1/2 h-full bg-black">
-          <span className="text-white font-bold text-lg">文</span>
+        <span className="languageIcon text-white font-bold text-lg">文</span> {/* languageIcon was added to the beginning of the className*/}
         </div>
       </button>
 

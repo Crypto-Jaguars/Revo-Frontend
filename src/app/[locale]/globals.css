@@ -74,5 +74,20 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    background-image: url('/Home.png'); /* default image for background */
+    background-size: cover; /* image increases or decreases its size based on the size of the window */
+    background-repeat: no-repeat; /* It ensures that image does not repeat */
+    background-position: center; /* It centers the image in the body, in horizontal and vertical way */
+  }
+
+  /* Ligth mode */
+  :root body {
+    background-color: hsl(var(--background)); /* White background when this mode selected*/
+    background-image: none; /* it removes the background image of Home.png */
+  }
+
+  /* Dark Mode */
+  .dark body {
+    background-image: url('/Home.png'); /* for image to be there when dark mode selected */
   }
 }
